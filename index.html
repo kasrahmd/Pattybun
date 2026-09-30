@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fa" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -31,7 +31,10 @@
     .homeSocial svg{width:54%;height:54%;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
     .homeFooterLine{margin-top:auto;text-align:center;color:#f0d7bc;font-size:clamp(6px,1.55vw,10px);letter-spacing:clamp(2px,.8vw,6px);direction:ltr;white-space:nowrap}
     .topbar{position:sticky;top:0;z-index:20;background:rgba(34,7,10,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
-    .topnav{display:flex;gap:10px;overflow:auto;padding:12px 14px}
+    .topnav{display:flex;gap:10px;overflow:auto;padding:12px 14px;align-items:center}
+    .langSwitch{display:flex;direction:ltr;flex:0 0 auto;border:1px solid var(--line);border-radius:9px;overflow:hidden;background:#22070a;margin-inline-start:auto}
+    .langBtn{appearance:none;border:0;background:transparent;color:#fff;font:900 11px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;padding:10px 9px;cursor:pointer}
+    .langBtn.active{background:var(--cream);color:#3b0d12}
     .pill{white-space:nowrap;padding:10px 14px;border-radius:999px;border:1px solid var(--line);font-weight:800;font-size:13px}
     .pill.active{background:var(--cream);color:#3b0d12}
     main{padding:24px 14px 70px}
@@ -49,9 +52,12 @@
     .card img.sideFood{width:70%;max-height:320px;object-fit:cover;object-position:center;background:#4b1118;margin:20px auto 4px;border-radius:16px}
     .cardBody{padding:14px}
     .titleRow{display:flex;direction:ltr;justify-content:space-between;align-items:center;gap:12px}
+    html[lang="fa"] .titleRow{direction:rtl}
     .name{font-size:18px;font-weight:950;line-height:1.2}
     .price{font-size:17px;font-weight:950;color:#f3c778;white-space:nowrap}
     .desc{margin:10px 0 0;color:var(--muted);font-size:13px;line-height:1.9}
+    html[lang="fa"] .desc{direction:rtl;text-align:right}
+    html[lang="en"] .desc{direction:ltr;text-align:left}
     .note{margin-top:36px;background:#321015;border:1px solid #9b6032;color:#f7dfbd;padding:14px 16px;border-radius:16px;text-align:center;font-size:13px}
     .sauceGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
     .sauce{background:linear-gradient(180deg,var(--bg3),var(--bg2));border:1px solid var(--line);color:#fff;border-radius:18px;padding:12px 10px 14px;text-align:center;font-size:14px;font-weight:800;box-shadow:0 10px 22px rgba(0,0,0,.18)}
@@ -63,6 +69,7 @@
     .drinkMedia{background:transparent;padding:10px;display:flex;align-items:center;justify-content:center;min-height:220px}
     .drinkMedia img{max-height:200px;width:auto;max-width:100%;object-fit:contain}
     .drinkInfo{display:flex;direction:ltr;justify-content:space-between;align-items:center;gap:8px;padding:12px}
+    html[lang="fa"] .drinkInfo{direction:rtl}
     .drinkInfo b{font-size:14px}
     .drinkInfo span{font-weight:900;color:#f3c778;white-space:nowrap}
     .footer{text-align:center;color:#bfaea5;font-size:11px;letter-spacing:2px;padding-top:34px}
@@ -87,7 +94,7 @@
           <div class="homeIcon" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M12 21s6-5.1 6-11a6 6 0 1 0-12 0c0 5.9 6 11 6 11Z"/><circle cx="12" cy="10" r="2.2"/></svg>
           </div>
-          <div class="homeInfoText">Saadat abad , south sarafha , western 31th</div>
+          <div class="homeInfoText" data-en="Saadat Abad, South Sarafha, Western 31st" data-fa="سعادت‌آباد، صراف‌های جنوبی، سی و یکم غربی">Saadat Abad, South Sarafha, Western 31st</div>
         </div>
         <div class="homeInfoBlock">
           <div class="homeIcon" aria-hidden="true">
@@ -99,7 +106,7 @@
           <div class="homeIcon" aria-hidden="true">
             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg>
           </div>
-          <div class="homeInfoText">Open Daily<br>12 PM – 12 AM</div>
+          <div class="homeInfoText"><span data-en="Open Daily" data-fa="همه‌روزه باز">Open Daily</span><br><span data-en="12 PM – 12 AM" data-fa="۱۲ ظهر تا ۱۲ شب">12 PM – 12 AM</span></div>
         </div>
       </div>
       <div class="homeSocials">
@@ -110,73 +117,94 @@
           <svg viewBox="0 0 24 24"><path d="M20 11.6a8 8 0 0 1-11.8 7l-4.2 1.1 1.1-4.1A8 8 0 1 1 20 11.6Z"/><path d="M9 8.2c.3 2.5 2.3 4.5 4.8 4.8M8.3 7.4c.5-.4 1-.3 1.3.2l.8 1.4c.2.4.1.8-.2 1.1l-.6.5c.7 1.2 1.6 2.1 2.8 2.8l.5-.6c.3-.3.7-.4 1.1-.2l1.4.8c.5.3.6.8.2 1.3"/></svg>
         </a>
       </div>
-      <div class="homeFooterLine">GOOD BURGERS · HAPPIER PEOPLE</div>
+      <div class="homeFooterLine" data-en="GOOD BURGERS · HAPPIER PEOPLE" data-fa="برگر خوب · حال بهتر">GOOD BURGERS · HAPPIER PEOPLE</div>
     </div>
   </section>
 
   <div class="topbar">
     <div class="wrap topnav">
-      <a class="pill active" href="#home">HOME</a>
-      <a class="pill" href="#burgers">BURGERS</a>
-      <a class="pill" href="#sides">SIDES</a>
-      <a class="pill" href="#sauces">SAUCES</a>
-      <a class="pill" href="#drinks">DRINKS</a>
+      <a class="pill active" href="#home" data-en="HOME" data-fa="خانه">HOME</a>
+      <a class="pill" href="#burgers" data-en="BURGERS" data-fa="برگرها">BURGERS</a>
+      <a class="pill" href="#sides" data-en="SIDES" data-fa="کنار غذا">SIDES</a>
+      <a class="pill" href="#sauces" data-en="SAUCES" data-fa="سس‌ها">SAUCES</a>
+      <a class="pill" href="#drinks" data-en="DRINKS" data-fa="نوشیدنی‌ها">DRINKS</a>
+      <div class="langSwitch" aria-label="Language">
+        <button class="langBtn active" type="button" data-lang="en">EN</button>
+        <button class="langBtn" type="button" data-lang="fa">FA</button>
+      </div>
     </div>
   </div>
 
   <main class="wrap" id="menu">
     <header class="head">
-      <h1>PATTY BUN</h1>
-      <p>ONE BITE SAYS IT ALL</p>
+      <h1 data-en="PATTY BUN" data-fa="پتی بان">PATTY BUN</h1>
+      <p data-en="ONE BITE SAYS IT ALL" data-fa="یک گاز، همه‌چیز را می‌گوید">ONE BITE SAYS IT ALL</p>
     </header>
 
     <section class="section" id="burgers" style="margin-top:34px">
-      <div class="sectionTitle"><h2>BURGERS 🍔</h2></div>
+      <div class="sectionTitle"><h2 data-en="BURGERS 🍔" data-fa="برگرها 🍔">BURGERS 🍔</h2></div>
       <div class="grid burgerGrid">
-        <article class="card"><img class="food" src="classic-plate.webp" alt="Classic Bun" loading="lazy" decoding="async"><div class="cardBody"><div class="titleRow"><div class="name">CLASSIC BUN</div><div class="price">840 T</div></div><p class="desc">سه لایه گوشت، ۲۴۰ گرم، رلیش خیار و پیازچه، سس پتی بان</p></div></article>
-        <article class="card"><img class="food" src="cheese-plate.webp" alt="Cheese Bun" loading="lazy" decoding="async"><div class="cardBody"><div class="titleRow"><div class="name">CHEESE BUN</div><div class="price">890 T</div></div><p class="desc">سه لایه گوشت، ۲۴۰ گرم، ۲ ورق پنیر گودا، رلیش خیار و پیازچه، سس پتی بان</p></div></article>
-        <article class="card"><img class="food" src="carameli-plate.webp" alt="Carameli Bun" loading="lazy" decoding="async"><div class="cardBody"><div class="titleRow"><div class="name">CARAMELI BUN</div><div class="price">1,040 T</div></div><p class="desc">سه لایه گوشت، ۲۴۰ گرم، گردو و پیاز کاراملی، ۱ ورق پنیر دودی، ۱ ورق پنیر گودا، رلیش خیار و پیازچه، سس پتی بان</p></div></article>
-        <article class="card"><img class="food" src="ranch-plate.webp" alt="Ranch Bun" loading="lazy" decoding="async"><div class="cardBody"><div class="titleRow"><div class="name">RANCH BUN</div><div class="price">990 T</div></div><p class="desc">سه لایه گوشت، ۲۴۰ گرم، پنیر بوترکیزه، ۱ ورق پنیر دودی، رلیش خیار و پیازچه، سس پتی بان</p></div></article>
-        <article class="card"><img class="food" src="haloumi-plate.webp" alt="Haloumi Bun" loading="lazy" decoding="async"><div class="cardBody"><div class="titleRow"><div class="name">HALOUMI BUN</div><div class="price">1,040 T</div></div><p class="desc">سه لایه گوشت، ۲۴۰ گرم، پنیر هالومی، ۱ ورق پنیر دودی، رلیش خیار و پیازچه، سس پتی بان</p></div></article>
-        <article class="card"><img class="food" src="patty-plate.webp" alt="Patty Bun" loading="lazy" decoding="async"><div class="cardBody"><div class="titleRow"><div class="name">PATTY BUN</div><div class="price">1,290 T</div></div><p class="desc">سه لایه گوشت، ۲۴۰ گرم، پولد بیف ۷۰ گرم، سس قارچ کرمی و پیاز کاراملی، ۱ ورق پنیر دودی، ۱ ورق پنیر گودا، رلیش خیار و پیازچه، سس پتی بان</p></div></article>
-        <article class="card"><img class="food" src="bacon-plate.webp" alt="Bacon Bun" loading="lazy" decoding="async"><div class="cardBody"><div class="titleRow"><div class="name">BACON BUN</div><div class="price">1,140 T</div></div><p class="desc">سه لایه گوشت، ۲۴۰ گرم، ۲ ورق بیکن ایرلندی، ۱ ورق پنیر دودی، ۱ ورق پنیر گودا، رلیش خیار و پیازچه، سس پتی بان</p></div></article>
-        <article class="card"><img class="food" src="hot-plate.webp" alt="Hot Bun" loading="lazy" decoding="async"><div class="cardBody"><div class="titleRow"><div class="name">HOT BUN</div><div class="price">1,040 T</div></div><p class="desc">سه لایه گوشت، ۲۴۰ گرم، پپرونی تند هالوپینو، ۲ ورق پنیر گودا، رلیش خیار و پیازچه، سس پتی بان</p></div></article>
+        <article class="card"><img class="food" src="classic-plate.webp" alt="Classic Bun" loading="lazy" decoding="async"><div class="cardBody"><div class="titleRow"><div class="name" data-en="CLASSIC BUN" data-fa="کلاسیک بان">CLASSIC BUN</div><div class="price" data-en="840 T" data-fa="۸۴۰ ت">840 T</div></div><p class="desc" data-en="Three layers of beef, 240 g, cucumber & scallion relish, Patty Bun sauce" data-fa="سه لایه گوشت، ۲۴۰ گرم، رلیش خیار و پیازچه، سس پتی بان">Three layers of beef, 240 g, cucumber & scallion relish, Patty Bun sauce</p></div></article>
+        <article class="card"><img class="food" src="cheese-plate.webp" alt="Cheese Bun" loading="lazy" decoding="async"><div class="cardBody"><div class="titleRow"><div class="name" data-en="CHEESE BUN" data-fa="چیز بان">CHEESE BUN</div><div class="price" data-en="890 T" data-fa="۸۹۰ ت">890 T</div></div><p class="desc" data-en="Three layers of beef, 240 g, 2 slices of Gouda, cucumber & scallion relish, Patty Bun sauce" data-fa="سه لایه گوشت، ۲۴۰ گرم، ۲ ورق پنیر گودا، رلیش خیار و پیازچه، سس پتی بان">Three layers of beef, 240 g, 2 slices of Gouda, cucumber & scallion relish, Patty Bun sauce</p></div></article>
+        <article class="card"><img class="food" src="carameli-plate.webp" alt="Carameli Bun" loading="lazy" decoding="async"><div class="cardBody"><div class="titleRow"><div class="name" data-en="CARAMELI BUN" data-fa="کاراملی بان">CARAMELI BUN</div><div class="price" data-en="1,040 T" data-fa="۱,۰۴۰ ت">1,040 T</div></div><p class="desc" data-en="Three layers of beef, 240 g, caramelized walnut & onion, 1 slice smoked cheese, 1 slice Gouda, cucumber & scallion relish, Patty Bun sauce" data-fa="سه لایه گوشت، ۲۴۰ گرم، گردو و پیاز کاراملی، ۱ ورق پنیر دودی، ۱ ورق پنیر گودا، رلیش خیار و پیازچه، سس پتی بان">Three layers of beef, 240 g, caramelized walnut & onion, 1 slice smoked cheese, 1 slice Gouda, cucumber & scallion relish, Patty Bun sauce</p></div></article>
+        <article class="card"><img class="food" src="ranch-plate.webp" alt="Ranch Bun" loading="lazy" decoding="async"><div class="cardBody"><div class="titleRow"><div class="name" data-en="RANCH BUN" data-fa="رنچ بان">RANCH BUN</div><div class="price" data-en="990 T" data-fa="۹۹۰ ت">990 T</div></div><p class="desc" data-en="Three layers of beef, 240 g, special ranch cheese, 1 slice smoked cheese, cucumber & scallion relish, Patty Bun sauce" data-fa="سه لایه گوشت، ۲۴۰ گرم، پنیر بوترکیزه، ۱ ورق پنیر دودی، رلیش خیار و پیازچه، سس پتی بان">Three layers of beef, 240 g, special ranch cheese, 1 slice smoked cheese, cucumber & scallion relish, Patty Bun sauce</p></div></article>
+        <article class="card"><img class="food" src="haloumi-plate.webp" alt="Haloumi Bun" loading="lazy" decoding="async"><div class="cardBody"><div class="titleRow"><div class="name" data-en="HALOUMI BUN" data-fa="هالومی بان">HALOUMI BUN</div><div class="price" data-en="1,040 T" data-fa="۱,۰۴۰ ت">1,040 T</div></div><p class="desc" data-en="Three layers of beef, 240 g, halloumi cheese, 1 slice smoked cheese, cucumber & scallion relish, Patty Bun sauce" data-fa="سه لایه گوشت، ۲۴۰ گرم، پنیر هالومی، ۱ ورق پنیر دودی، رلیش خیار و پیازچه، سس پتی بان">Three layers of beef, 240 g, halloumi cheese, 1 slice smoked cheese, cucumber & scallion relish, Patty Bun sauce</p></div></article>
+        <article class="card"><img class="food" src="patty-plate.webp" alt="Patty Bun" loading="lazy" decoding="async"><div class="cardBody"><div class="titleRow"><div class="name" data-en="PATTY BUN" data-fa="پتی بان">PATTY BUN</div><div class="price" data-en="1,290 T" data-fa="۱,۲۹۰ ت">1,290 T</div></div><p class="desc" data-en="Three layers of beef, 240 g, 70 g pulled beef, creamy mushroom sauce & caramelized onion, 1 slice smoked cheese, 1 slice Gouda, cucumber & scallion relish, Patty Bun sauce" data-fa="سه لایه گوشت، ۲۴۰ گرم، پولد بیف ۷۰ گرم، سس قارچ کرمی و پیاز کاراملی، ۱ ورق پنیر دودی، ۱ ورق پنیر گودا، رلیش خیار و پیازچه، سس پتی بان">Three layers of beef, 240 g, 70 g pulled beef, creamy mushroom sauce & caramelized onion, 1 slice smoked cheese, 1 slice Gouda, cucumber & scallion relish, Patty Bun sauce</p></div></article>
+        <article class="card"><img class="food" src="bacon-plate.webp" alt="Bacon Bun" loading="lazy" decoding="async"><div class="cardBody"><div class="titleRow"><div class="name" data-en="BACON BUN" data-fa="بیکن بان">BACON BUN</div><div class="price" data-en="1,140 T" data-fa="۱,۱۴۰ ت">1,140 T</div></div><p class="desc" data-en="Three layers of beef, 240 g, 2 slices Irish bacon, 1 slice smoked cheese, 1 slice Gouda, cucumber & scallion relish, Patty Bun sauce" data-fa="سه لایه گوشت، ۲۴۰ گرم، ۲ ورق بیکن ایرلندی، ۱ ورق پنیر دودی، ۱ ورق پنیر گودا، رلیش خیار و پیازچه، سس پتی بان">Three layers of beef, 240 g, 2 slices Irish bacon, 1 slice smoked cheese, 1 slice Gouda, cucumber & scallion relish, Patty Bun sauce</p></div></article>
+        <article class="card"><img class="food" src="hot-plate.webp" alt="Hot Bun" loading="lazy" decoding="async"><div class="cardBody"><div class="titleRow"><div class="name" data-en="HOT BUN" data-fa="هات بان">HOT BUN</div><div class="price" data-en="1,040 T" data-fa="۱,۰۴۰ ت">1,040 T</div></div><p class="desc" data-en="Three layers of beef, 240 g, spicy pepperoni & jalapeño, 2 slices Gouda, cucumber & scallion relish, Patty Bun sauce" data-fa="سه لایه گوشت، ۲۴۰ گرم، پپرونی تند هالوپینو، ۲ ورق پنیر گودا، رلیش خیار و پیازچه، سس پتی بان">Three layers of beef, 240 g, spicy pepperoni & jalapeño, 2 slices Gouda, cucumber & scallion relish, Patty Bun sauce</p></div></article>
       </div>
-      <div class="note">کلیه برگرها به صورت دوبل قابل سفارش می‌باشد (+۴۰۰ ت)</div>
+      <div class="note" data-en="All burgers can be ordered double (+400 T)" data-fa="کلیه برگرها به صورت دوبل قابل سفارش می‌باشد (+۴۰۰ ت)">All burgers can be ordered double (+400 T)</div>
     </section>
 
     <section class="section" id="sides">
-      <div class="sectionTitle"><h2>SIDES 🍟</h2></div>
+      <div class="sectionTitle"><h2 data-en="SIDES 🍟" data-fa="کنار غذا 🍟">SIDES 🍟</h2></div>
       <div class="grid">
-        <article class="card"><img class="food sideFood" src="french-fries-compact.webp" alt="French Fries" loading="lazy" decoding="async"><div class="cardBody"><div class="titleRow"><div class="name">FRENCH FRIES</div><div class="price">280 T</div></div><p class="desc">سیب‌زمینی + سس رومولا</p></div></article>
+        <article class="card"><img class="food sideFood" src="french-fries-compact.webp" alt="French Fries" loading="lazy" decoding="async"><div class="cardBody"><div class="titleRow"><div class="name" data-en="FRENCH FRIES" data-fa="سیب‌زمینی سرخ‌کرده">FRENCH FRIES</div><div class="price" data-en="280 T" data-fa="۲۸۰ ت">280 T</div></div><p class="desc" data-en="French fries + Romola sauce" data-fa="سیب‌زمینی + سس رومولا">French fries + Romola sauce</p></div></article>
       </div>
     </section>
 
     <section class="section" id="sauces">
-      <div class="sectionTitle"><h2>SAUCES</h2></div>
+      <div class="sectionTitle"><h2 data-en="SAUCES" data-fa="سس‌ها">SAUCES</h2></div>
       <div class="sauceGrid">
-        <div class="sauce"><img src="sauce-dynamite.webp" alt="Dynamite Sauce" loading="lazy" decoding="async"><span class="sname">DYNAMITE</span><b>45 T</b></div>
-        <div class="sauce"><img src="sauce-romola.webp" alt="Romola Sauce" loading="lazy" decoding="async"><span class="sname">ROMOLA</span><b>45 T</b></div>
-        <div class="sauce"><img src="sauce-aioli.webp" alt="Aioli Sauce" loading="lazy" decoding="async"><span class="sname">AIOLI</span><b>45 T</b></div>
-        <div class="sauce"><img src="sauce-ranch.webp" alt="Ranch Sauce" loading="lazy" decoding="async"><span class="sname">RANCH</span><b>45 T</b></div>
-        <div class="sauce"><img src="sauce-fire.webp" alt="Fire Sauce" loading="lazy" decoding="async"><span class="sname">FIRE</span><b>45 T</b></div>
-        <div class="sauce"><img src="sauce-honey-mustard.webp" alt="Honey Mustard Sauce" loading="lazy" decoding="async"><span class="sname">HONEY MUSTARD</span><b>65 T</b></div>
+        <div class="sauce"><img src="sauce-dynamite.webp" alt="Dynamite Sauce" loading="lazy" decoding="async"><span class="sname" data-en="DYNAMITE" data-fa="داینامیت">DYNAMITE</span><b data-en="45 T" data-fa="۴۵ ت">45 T</b></div>
+        <div class="sauce"><img src="sauce-romola.webp" alt="Romola Sauce" loading="lazy" decoding="async"><span class="sname" data-en="ROMOLA" data-fa="رومولا">ROMOLA</span><b data-en="45 T" data-fa="۴۵ ت">45 T</b></div>
+        <div class="sauce"><img src="sauce-aioli.webp" alt="Aioli Sauce" loading="lazy" decoding="async"><span class="sname" data-en="AIOLI" data-fa="آیولی">AIOLI</span><b data-en="45 T" data-fa="۴۵ ت">45 T</b></div>
+        <div class="sauce"><img src="sauce-ranch.webp" alt="Ranch Sauce" loading="lazy" decoding="async"><span class="sname" data-en="RANCH" data-fa="رنچ">RANCH</span><b data-en="45 T" data-fa="۴۵ ت">45 T</b></div>
+        <div class="sauce"><img src="sauce-fire.webp" alt="Fire Sauce" loading="lazy" decoding="async"><span class="sname" data-en="FIRE" data-fa="فایر">FIRE</span><b data-en="45 T" data-fa="۴۵ ت">45 T</b></div>
+        <div class="sauce"><img src="sauce-honey-mustard.webp" alt="Honey Mustard Sauce" loading="lazy" decoding="async"><span class="sname" data-en="HONEY MUSTARD" data-fa="هانی ماسترد">HONEY MUSTARD</span><b data-en="65 T" data-fa="۶۵ ت">65 T</b></div>
       </div>
     </section>
 
     <section class="section" id="drinks">
-      <div class="sectionTitle"><h2>DRINKS 🥤</h2></div>
+      <div class="sectionTitle"><h2 data-en="DRINKS 🥤" data-fa="نوشیدنی‌ها 🥤">DRINKS 🥤</h2></div>
       <div class="drinkGrid">
-        <article class="drink"><div class="drinkMedia"><img src="coke.webp" alt="Coca-Cola" loading="lazy" decoding="async"></div><div class="drinkInfo"><b>Coca-Cola</b><span>95 T</span></div></article>
-        <article class="drink"><div class="drinkMedia"><img src="coke_zero.webp" alt="Coca-Cola Zero" loading="lazy" decoding="async"></div><div class="drinkInfo"><b>Coca-Cola Zero</b><span>95 T</span></div></article>
-        <article class="drink"><div class="drinkMedia"><img src="sprite.webp" alt="Sprite" loading="lazy" decoding="async"></div><div class="drinkInfo"><b>Sprite</b><span>95 T</span></div></article>
-        <article class="drink"><div class="drinkMedia"><img src="fanta.webp" alt="Fanta Orange" loading="lazy" decoding="async"></div><div class="drinkInfo"><b>Fanta Orange</b><span>95 T</span></div></article>
-        <article class="drink"><div class="drinkMedia"><img src="water.webp" alt="Mineral Water" loading="lazy" decoding="async"></div><div class="drinkInfo"><b>Mineral Water</b><span>40 T</span></div></article>
-        <article class="drink"><div class="drinkMedia"><img src="delster.webp" alt="Delster Lemon" loading="lazy" decoding="async"></div><div class="drinkInfo"><b>Delster Lemon</b><span>95 T</span></div></article>
+        <article class="drink"><div class="drinkMedia"><img src="coke.webp" alt="Coca-Cola" loading="lazy" decoding="async"></div><div class="drinkInfo"><b data-en="Coca-Cola" data-fa="کوکاکولا">Coca-Cola</b><span data-en="95 T" data-fa="۹۵ ت">95 T</span></div></article>
+        <article class="drink"><div class="drinkMedia"><img src="coke_zero.webp" alt="Coca-Cola Zero" loading="lazy" decoding="async"></div><div class="drinkInfo"><b data-en="Coca-Cola Zero" data-fa="کوکاکولا زیرو">Coca-Cola Zero</b><span data-en="95 T" data-fa="۹۵ ت">95 T</span></div></article>
+        <article class="drink"><div class="drinkMedia"><img src="sprite.webp" alt="Sprite" loading="lazy" decoding="async"></div><div class="drinkInfo"><b data-en="Sprite" data-fa="اسپرایت">Sprite</b><span data-en="95 T" data-fa="۹۵ ت">95 T</span></div></article>
+        <article class="drink"><div class="drinkMedia"><img src="fanta.webp" alt="Fanta Orange" loading="lazy" decoding="async"></div><div class="drinkInfo"><b data-en="Fanta Orange" data-fa="فانتا پرتقالی">Fanta Orange</b><span data-en="95 T" data-fa="۹۵ ت">95 T</span></div></article>
+        <article class="drink"><div class="drinkMedia"><img src="water.webp" alt="Mineral Water" loading="lazy" decoding="async"></div><div class="drinkInfo"><b data-en="Mineral Water" data-fa="آب معدنی">Mineral Water</b><span data-en="40 T" data-fa="۴۰ ت">40 T</span></div></article>
+        <article class="drink"><div class="drinkMedia"><img src="delster.webp" alt="Delster Lemon" loading="lazy" decoding="async"></div><div class="drinkInfo"><b data-en="Delster Lemon" data-fa="دلستر لیمویی">Delster Lemon</b><span data-en="95 T" data-fa="۹۵ ت">95 T</span></div></article>
       </div>
     </section>
 
-    <div class="footer">PATTY BUN · TEHRAN · ONE BITE SAYS IT ALL</div>
+    <div class="footer" data-en="PATTY BUN · TEHRAN · ONE BITE SAYS IT ALL" data-fa="پتی بان · تهران · یک گاز، همه‌چیز را می‌گوید">PATTY BUN · TEHRAN · ONE BITE SAYS IT ALL</div>
   </main>
+  <script>
+    (() => {
+      const buttons = document.querySelectorAll('.langBtn');
+      function setLanguage(lang){
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'fa' ? 'rtl' : 'ltr';
+        document.querySelectorAll('[data-en][data-fa]').forEach(el => {
+          el.textContent = el.dataset[lang];
+        });
+        buttons.forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
+        localStorage.setItem('pattybun-lang', lang);
+      }
+      buttons.forEach(btn => btn.addEventListener('click', () => setLanguage(btn.dataset.lang)));
+      setLanguage(localStorage.getItem('pattybun-lang') || 'en');
+    })();
+  </script>
+
 </body>
 </html>

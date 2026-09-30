@@ -32,7 +32,8 @@
     .homeFooterLine{margin-top:auto;text-align:center;color:#f0d7bc;font-size:clamp(6px,1.55vw,10px);letter-spacing:clamp(2px,.8vw,6px);direction:ltr;white-space:nowrap}
     .topbar{position:sticky;top:0;z-index:20;background:rgba(34,7,10,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
     .topnav{display:flex;gap:10px;overflow:auto;padding:12px 14px;align-items:center}
-    .langSwitch{display:flex;direction:ltr;flex:0 0 auto;border:1px solid var(--line);border-radius:9px;overflow:hidden;background:#22070a;margin-inline-start:auto}
+    .langSwitch{display:flex;direction:ltr;border:1px solid rgba(255,255,255,.35);border-radius:9px;overflow:hidden;background:rgba(34,7,10,.86);backdrop-filter:blur(8px);box-shadow:0 6px 18px rgba(0,0,0,.22)}
+    .heroLang{position:absolute;top:16px;right:16px;z-index:15}
     .langBtn{appearance:none;border:0;background:transparent;color:#fff;font:900 11px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;padding:10px 9px;cursor:pointer}
     .langBtn.active{background:var(--cream);color:#3b0d12}
     .pill{white-space:nowrap;padding:10px 14px;border-radius:999px;border:1px solid var(--line);font-weight:800;font-size:13px}
@@ -86,6 +87,10 @@
 </head>
 <body>
   <section class="hero" id="home">
+    <div class="heroLang langSwitch" aria-label="Language">
+      <button class="langBtn active" type="button" data-lang="en">EN</button>
+      <button class="langBtn" type="button" data-lang="fa">FA</button>
+    </div>
     <img class="heroImage" src="home.webp" loading="eager" fetchpriority="high" decoding="async" alt="Patty Bun">
     <a class="enterHotspot" href="#menu" aria-label="Enter Menu"></a>
     <div class="homeInfoOverlay">
@@ -94,7 +99,7 @@
           <div class="homeIcon" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M12 21s6-5.1 6-11a6 6 0 1 0-12 0c0 5.9 6 11 6 11Z"/><circle cx="12" cy="10" r="2.2"/></svg>
           </div>
-          <div class="homeInfoText" data-en="Saadat Abad, South Sarafha, Western 31st" data-fa="سعادت‌آباد، صراف‌های جنوبی، سی و یکم غربی">Saadat Abad, South Sarafha, Western 31st</div>
+          <div class="homeInfoText" data-en="Saadat Abad, South Sarafha, Western 31st" data-fa="سعادت‌آباد، صرافهای جنوبی، سی و یکم غربی">Saadat Abad, South Sarafha, Western 31st</div>
         </div>
         <div class="homeInfoBlock">
           <div class="homeIcon" aria-hidden="true">
@@ -106,7 +111,7 @@
           <div class="homeIcon" aria-hidden="true">
             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg>
           </div>
-          <div class="homeInfoText"><span data-en="Open Daily" data-fa="همه‌روزه باز">Open Daily</span><br><span data-en="12 PM – 12 AM" data-fa="۱۲ ظهر تا ۱۲ شب">12 PM – 12 AM</span></div>
+          <div class="homeInfoText"><span data-en="Open Daily" data-fa="ساعات کاری">Open Daily</span><br><span data-en="12 PM – 12 AM" data-fa="۱۲ ظهر تا ۱۲ شب">12 PM – 12 AM</span></div>
         </div>
       </div>
       <div class="homeSocials">
@@ -117,7 +122,7 @@
           <svg viewBox="0 0 24 24"><path d="M20 11.6a8 8 0 0 1-11.8 7l-4.2 1.1 1.1-4.1A8 8 0 1 1 20 11.6Z"/><path d="M9 8.2c.3 2.5 2.3 4.5 4.8 4.8M8.3 7.4c.5-.4 1-.3 1.3.2l.8 1.4c.2.4.1.8-.2 1.1l-.6.5c.7 1.2 1.6 2.1 2.8 2.8l.5-.6c.3-.3.7-.4 1.1-.2l1.4.8c.5.3.6.8.2 1.3"/></svg>
         </a>
       </div>
-      <div class="homeFooterLine" data-en="GOOD BURGERS · HAPPIER PEOPLE" data-fa="برگر خوب · حال بهتر">GOOD BURGERS · HAPPIER PEOPLE</div>
+      <div class="homeFooterLine" data-en="GOOD BURGERS · HAPPIER PEOPLE" data-fa="GOOD BURGERS · HAPPIER PEOPLE">GOOD BURGERS · HAPPIER PEOPLE</div>
     </div>
   </section>
 
@@ -128,17 +133,13 @@
       <a class="pill" href="#sides" data-en="SIDES" data-fa="کنار غذا">SIDES</a>
       <a class="pill" href="#sauces" data-en="SAUCES" data-fa="سس‌ها">SAUCES</a>
       <a class="pill" href="#drinks" data-en="DRINKS" data-fa="نوشیدنی‌ها">DRINKS</a>
-      <div class="langSwitch" aria-label="Language">
-        <button class="langBtn active" type="button" data-lang="en">EN</button>
-        <button class="langBtn" type="button" data-lang="fa">FA</button>
-      </div>
     </div>
   </div>
 
   <main class="wrap" id="menu">
     <header class="head">
-      <h1 data-en="PATTY BUN" data-fa="پتی بان">PATTY BUN</h1>
-      <p data-en="ONE BITE SAYS IT ALL" data-fa="یک گاز، همه‌چیز را می‌گوید">ONE BITE SAYS IT ALL</p>
+      <h1 data-en="PATTY BUN" data-fa="PATTY BUN">PATTY BUN</h1>
+      <p data-en="ONE BITE SAYS IT ALL" data-fa="ONE BITE SAYS IT ALL">ONE BITE SAYS IT ALL</p>
     </header>
 
     <section class="section" id="burgers" style="margin-top:34px">
@@ -187,7 +188,7 @@
       </div>
     </section>
 
-    <div class="footer" data-en="PATTY BUN · TEHRAN · ONE BITE SAYS IT ALL" data-fa="پتی بان · تهران · یک گاز، همه‌چیز را می‌گوید">PATTY BUN · TEHRAN · ONE BITE SAYS IT ALL</div>
+    <div class="footer" data-en="PATTY BUN · TEHRAN · ONE BITE SAYS IT ALL" data-fa="PATTY BUN · TEHRAN · ONE BITE SAYS IT ALL">PATTY BUN · TEHRAN · ONE BITE SAYS IT ALL</div>
   </main>
   <script>
     (() => {

@@ -1,0 +1,1 @@
+Upload index.html and all WEBP files to the repository root.

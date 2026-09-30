@@ -18,6 +18,8 @@
      .hero{max-width:850px;margin:0 auto;position:relative;background:#170407}
     .heroImage{width:100%;height:auto;display:block}
     .enterHotspot{position:absolute;left:17.5%;top:72.25%;width:64.5%;height:5.55%;border-radius:999px;z-index:8}
+    .enterMenuLabel{display:none}
+    html[lang="fa"] .enterMenuLabel{position:absolute;left:32%;top:23%;width:42%;height:54%;display:flex;align-items:center;justify-content:center;background:#f2e6ce;color:#3b0d12;border-radius:4px;font-family:Tahoma,Arial,sans-serif;font-size:clamp(12px,3.5vw,29px);font-weight:900;line-height:1;white-space:nowrap;direction:rtl}
     .homeInfoOverlay{position:absolute;left:0;right:0;top:79.0%;bottom:0;z-index:6;background:linear-gradient(180deg,#5a030a 0%,#4a0207 50%,#310104 100%);display:flex;flex-direction:column;justify-content:flex-start;padding:2.8% 7% 2.4%;color:#fff}
     .homeInfoTop{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:2.5%;align-items:start;text-align:center}
     .homeInfoBlock{min-width:0;border-inline-end:1px solid rgba(255,240,216,.35);padding-inline:2%}
@@ -93,7 +95,7 @@
       <button class="langBtn" type="button" data-lang="fa">FA</button>
     </div>
     <img class="heroImage" src="home.webp" loading="eager" fetchpriority="high" decoding="async" alt="Patty Bun">
-    <a class="enterHotspot" href="#menu" aria-label="Enter Menu"></a>
+    <a class="enterHotspot" href="#menu" aria-label="Enter Menu"><span class="enterMenuLabel" aria-hidden="true">ورود به منو</span></a>
     <div class="homeInfoOverlay">
       <div class="homeInfoTop">
         <div class="homeInfoBlock">
@@ -195,6 +197,7 @@
     (() => {
       const buttons = document.querySelectorAll('.langBtn');
       function setLanguage(lang){
+        document.querySelector('.enterHotspot').setAttribute('aria-label', lang === 'fa' ? 'ورود به منو' : 'Enter Menu');
         document.documentElement.lang = lang;
         document.documentElement.dir = lang === 'fa' ? 'rtl' : 'ltr';
         document.querySelectorAll('[data-en][data-fa]').forEach(el => {
@@ -210,4 +213,5 @@
 
 </body>
 </html>
+
 

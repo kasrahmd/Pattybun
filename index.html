@@ -33,6 +33,7 @@
     .homeSocial svg{width:54%;height:54%;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
     .homeSocial svg.whatsappLogo{width:60%;height:60%;fill:#fff;stroke:none}
     .homeFooterLine{margin-top:auto;text-align:center;color:#f0d7bc;font-size:clamp(6px,1.55vw,10px);letter-spacing:clamp(2px,.8vw,6px);direction:ltr;white-space:nowrap}
+
     .topbar{position:sticky;top:0;z-index:20;background:rgba(34,7,10,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
     .topnav{display:flex;gap:10px;overflow:auto;padding:12px 14px;align-items:center}
     .langSwitch{display:flex;direction:ltr;border:1px solid rgba(255,255,255,.35);border-radius:9px;overflow:hidden;background:rgba(34,7,10,.86);backdrop-filter:blur(8px);box-shadow:0 6px 18px rgba(0,0,0,.22)}
@@ -70,8 +71,8 @@
     .sauce b{display:block;margin-top:8px;font-size:15px;color:#f3c778;direction:ltr;unicode-bidi:isolate}
     .drinkGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
     .drink{background:var(--bg3);border:1px solid var(--line);border-radius:20px;overflow:hidden}
-    .drinkMedia{background:transparent;padding:10px;display:flex;align-items:center;justify-content:center;min-height:220px}
-    .drinkMedia img{max-height:200px;width:auto;max-width:100%;object-fit:contain}
+    .drinkMedia{background:transparent;padding:10px;display:flex;align-items:center;justify-content:center;height:144px}
+    .drinkMedia img{max-height:120px;width:auto;max-width:70%;object-fit:contain}
     .drinkInfo{display:flex;direction:ltr;justify-content:space-between;align-items:center;gap:8px;padding:12px}
     html[lang="fa"] .drinkInfo{direction:rtl}
     .drinkInfo b{font-size:14px}
@@ -129,7 +130,7 @@
     </div>
   </section>
 
-  <div class="topbar">
+<div class="topbar">
     <div class="wrap topnav">
       <a class="pill active" href="#home" data-en="HOME 🏠" data-fa="خانه 🏠">خانه 🏠</a>
       <a class="pill" href="#burgers" data-en="BURGERS 🍔" data-fa="برگرها 🍔">برگرها 🍔</a>
@@ -216,6 +217,7 @@
 
 </body>
 </html>
+
 
 
 
